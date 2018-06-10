@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,700');
+
+body, html{
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+body{
+    background: #F4F4F4 url("../resources/candleBg.svg");
+    background-size: cover;
+
+}
+
+#home-container{
+    display: grid;
+    grid-template-columns: .5fr 1fr 1fr .5fr ;
+    grid-gap: 10px;
+    grid-template-areas: ". left right ." ;
+    height: 100%;
+    margin-top: 30vh;
+}
+
+#inner{
+    grid-area: left;
+    align-self: center;
+    justify-self: center;
+}
+#illustration{
+    grid-area: right;
+    align-self: center;
+    justify-self: center;
+    width: 80%;
+}
+
+img#logo{
+    width: 130px;
+    margin-bottom: 1.6em;
+    animation: header 1s ease-in-out forwards
+}
+
+h1{
+    text-transform: uppercase;
+    color: #535353;
+    margin-bottom: 0.2em;
+    animation: header 1s ease-in-out forwards;
+}
+
+p.subtitle{
+    font-size: 1.4em;
+    color : #858585;
+    margin-top: 0;
+    animation: header 1s ease-in-out forwards
+}
+
+.cta{
+    background-color: #09BBE9 ;
+    padding: 1em;
+    color: #F4F4F4;
+    font-weight: bold;
+    margin-top: 2em;
+    display: inline-block;
+    border-radius: 5px;
+    text-decoration: none;
+    animation: header 1s ease-in-out forwards
+}
+
+#monitor{
+    animation: monitorIn 1s ease-in-out forwards;
+}
+
+.crypto-icons{
+
+    position: absolute;
+    width: 12%;
+}
+
+#dash{
+    margin-top: -4%;
+    margin-left: 9%;
+    animation: chatBlips .5s ease-in-out 2.7s forwards;
+    opacity: 0;
+    z-index: 2;
+}
+
+
+#eth{
+    margin-top: 9%;
+    margin-left: 18%;
+    animation: chatBlips .5s ease-in-out 1.3s forwards;
+    opacity: 0;
+    z-index: 2;
+}
+
+#iota{
+    margin-top: 4%;
+    margin-left: -2%;
+    animation: chatBlips .5s ease-in-out 1.9s forwards;
+    opacity: 0;
+    z-index: 2;
+}
+
+@keyframes monitorIn {
+    from{
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes header {
+    from{
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes chatBlips {
+    0%{
+        opacity: 0;
+        transform: scale(.3);
+    }
+    50%{
+        opacity: 1;
+        transform: scale(1.0);
+    }
+    70%{
+        transform: scale(0.9);
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
