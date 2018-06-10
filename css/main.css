@@ -9,6 +9,11 @@ body{
     background: #F4F4F4 url("../resources/candleBg.svg");
     background-size: cover;
 
+    /*to stop text selection*/
+    /*-webkit-user-select: none;*/
+    /*-moz-user-select: -moz-none;*/
+    /*-ms-user-select: none;*/
+    /*user-select: none;*/
 }
 
 #home-container{
